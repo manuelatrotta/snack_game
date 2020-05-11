@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100%;
+  margin: 30px;
+  background: lightgrey;
+}
+canvas {
+  border: 2px solid green;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 2px solid green;
+  text-transform: uppercase;
+
+}
