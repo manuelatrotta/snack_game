@@ -5,7 +5,7 @@ var context = canvas.getContext('2d');
 
 var grid = 16;
 var count = 0;
-//
+
 var snake = {
   x: 160,
   y: 160,
@@ -107,7 +107,7 @@ function loop() {
         snake.maxCells = 4;
         snake.dx = grid;
         snake.dy = 0;
-//si resetta posizione della mela
+        //si resetta posizione della mela
         apple.x = getRandomInt(0, 30) * grid;
         apple.y = getRandomInt(0, 30) * grid;
       }
@@ -115,13 +115,10 @@ function loop() {
   });
 }
 
-// movimento del serpente avviene tramite tastiera con e.which corrispondente alle freccie
-//37 freccia sinistra, 38 freccia verso l'alto, 39 freccia verso destra, 40 freccia verso il basso
+      // movimento del serpente avviene tramite tastiera con e.which corrispondente alle freccie
+      //37 freccia sinistra, 38 freccia verso l'alto, 39 freccia verso destra, 40 freccia verso il basso
 document.addEventListener('keydown', function(e) {
-  // prevent snake from backtracking on itself by checking that it's
-  // not already moving on the same axis (pressing left while moving
-  // left won't do anything, and pressing right while moving left
-  // shouldn't let you collide with your own body)
+//eventi in keydown ovvero al press delle freccie
 
   // freccia sinistra movimento su x di - 1 griglia
   if (e.which === 37 && snake.dx === 0) {
@@ -144,7 +141,3 @@ document.addEventListener('keydown', function(e) {
     snake.dx = 0;
   }
 });
-
-// inizia il gioco
-
-//requestAnimationFrame(loop);
